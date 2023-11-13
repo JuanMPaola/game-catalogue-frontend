@@ -1,0 +1,61 @@
+.container form {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    margin-left: 45%;
+    color: aliceblue;
+    background: rgb(27, 27, 27);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.container input {
+    background-color: rgba(128, 128, 128, 0.486);
+    border: none;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    color: black;
+}
+
+.container select {
+    background-color: rgba(128, 128, 128, 0.486);
+    border: none;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.container p {
+    color: red;
+    margin: 1px;
+}
+
+.container label {
+    margin-top: 15px;
+}
+
+.container button {
+    margin-top: 15px;
+    max-width: 100px;
+    background-color: rgba(228, 228, 228, 0.486);
+    border: none;
+    margin-left: 2px;
+    
+}
+
+.sumbit {
+    background-color: rgba(228, 228, 228, 0.486);
+    border: none;
+    margin-left: 2px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sumbit:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño del botón al hacer clic */
+    box-shadow: none; /* Elimina la sombra al hacer clic */
+    transition: transform 0s; /* Elimina la transición para que la animación sea instantánea al hacer clic */
+}

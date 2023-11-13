@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid rgb(0, 0, 0) 2px;
+    margin: 10px 10px 20px 20px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(38, 38, 38);
+    width: calc(220px * 4/3);
+
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2{
+    text-align: center;
+}
+
+.container img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: calc(220px * 4/3);
+    height: 230px;
+    max-height: 230px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.container:hover {
+    /* Escala al pasar el mouse sobre la tarjeta */
+    transform: scale(1.05);
+    /* Puedes ajustar el valor según tus preferencias */
+}
+
+a {
+    text-decoration: none;
+    /* Eliminar subrayado */
+    color: inherit;
+    /* Heredar el color del texto del contenedor padre */
+}

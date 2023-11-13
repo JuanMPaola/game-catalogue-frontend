@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container select{
+    width: 150px;
+}
+
+.filtros {
+    background-color: rgb(35, 35, 35);
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    color: antiquewhite;
+    align-items: center;
+}
+
+.checkboxs {
+    /* display: flex;
+    flex-direction: column;
+    align-items: end;
+    transform: translateX(-60px); */
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+/* Estilo para el div de carga */
+.loading {
+    position: absolute;
+    top: 40%;
+    /* Lleva el elemento al 50% de la altura de su contenedor principal */
+    left: 50%;
+    /* Lleva el elemento al 50% del ancho de su contenedor principal */
+    transform: translate(-50%, -50%);
+    /* Lo centra completamente en el medio */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* Agrega un espacio alrededor del contenido de carga */
+    background-color: transparent;
+}
+
+/* Estilo para los puntos */
+.loadingDots {
+    width: 50px;
+    height: 50px;
+    margin: -5x;
+    animation: dots_411 1.5s infinite ease-in-out;
+}
+
+/* Animación para los puntos */
+@keyframes loadingDotsAnimation {
+    5% {
+        opacity: 0;
+    }
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(.8);
+    }
+}
+
+.filtros button {
+    background-color: rgba(228, 228, 228, 0.486);
+    border: none;
+    margin-left: 2px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.filtros button:active{
+    transform: scale(0.95); /* Reduce ligeramente el tamaño del botón al hacer clic */
+    box-shadow: none; /* Elimina la sombra al hacer clic */
+    transition: transform 0s; /* Elimina la transición para que la animación sea instantánea al hacer clic */
+}
+

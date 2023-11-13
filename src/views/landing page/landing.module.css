@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,1)),url("https://media.wired.com/photos/62feb60bcea7c0581e825cb0/master/w_2560%2Cc_limit/Fate-of-Game-Preservation-Games-GettyImages-1170073827.jpg");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
+}
+
+
+.container {
+    color: antiquewhite;
+    max-width: 600px; /* Establece un ancho máximo de 600px */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Cambia a columna para centrar verticalmente el contenido */
+margin-top: 50px;
+}
+
+
+.div {
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.container button {
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    color: antiquewhite;
+    font-size: large;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Agregar una transición suave para los cambios de tamaño y brillo */
+}
+
+.container button:hover {
+    transform: scale(1.05); /* Escalar el botón al 105% del tamaño original */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: limegreen;
+}
