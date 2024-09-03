@@ -4,6 +4,7 @@ import style from "../cards/cards.module.css"
 function Cards({ allGames}) {
 
     const gamesList = Array.isArray(allGames) ? allGames : [];
+    console.log("Cards", gamesList);
 
     return (
         <div className={style.container}>

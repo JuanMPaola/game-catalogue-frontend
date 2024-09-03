@@ -2,7 +2,8 @@ import style from "./card.module.css"
 import { NavLink } from "react-router-dom";
 
 function Card({ game }) {
-    console.log(game.background_image)
+
+    console.log("card", game);
     return (
         <div className={style.container} >
             <NavLink to={`/detail/${game.id}`}>

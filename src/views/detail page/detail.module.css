@@ -14,16 +14,22 @@
     max-height: 400px;
 }
 
-.lateral{
-    background-color: rgb(38, 38, 38);
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    align-items: center;
+.loading {
+    position: absolute;
+    top: 40%;
+    /* Lleva el elemento al 50% de la altura de su contenedor principal */
+    left: 50%;
+    /* Lleva el elemento al 50% del ancho de su contenedor principal */
+    transform: translate(-50%, -50%);
+    /* Lo centra completamente en el medio */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* Agrega un espacio alrededor del contenido de carga */
+    background-color: transparent;
 }
+
 
 .container p{
     max-width: 500px;

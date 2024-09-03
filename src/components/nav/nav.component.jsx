@@ -48,10 +48,6 @@ function Nav() {
                 </NavLink>
             </div>
 
-            <div>
-                <button>User</button>
-            </div>
-
 
         </div>
     );

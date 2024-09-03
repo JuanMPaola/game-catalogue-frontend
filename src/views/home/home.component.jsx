@@ -26,6 +26,7 @@ function Home({ allGenres }) {
 
   const currentGames = allGames?.slice(indexOfFirstCharacter, indexOfLastCharacter)
 
+
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
@@ -131,8 +132,9 @@ function Home({ allGenres }) {
         </>) : (
 
           <div className={style.loading}>
-
             <h1>Loading<span className={style.loadingDots}>...</span></h1>
+            <br></br>
+            <h2>Server is waking up, please wait</h2>
 
           </div>
 
