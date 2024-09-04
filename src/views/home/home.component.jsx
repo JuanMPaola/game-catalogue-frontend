@@ -24,7 +24,9 @@ function Home({ allGenres }) {
   const indexOfLastCharacter = currentPage * gamesPerPage
   const indexOfFirstCharacter = indexOfLastCharacter - gamesPerPage
 
-  const currentGames = allGames?.slice(indexOfFirstCharacter, indexOfLastCharacter)
+  const currentGames = Array.isArray(allGames)
+  ? allGames.slice(indexOfFirstCharacter, indexOfLastCharacter)
+  : [];
 
 
   const paginado = (pageNumber) => {
