@@ -16,9 +16,11 @@ export const ORDER_NAMRAT = "ORDER_NAMRAT"
 export const FILTER_GENRES = "FILTER_GENRES"
 export const FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN"
 
+const REACT_APP_BACK_URL = process.env.REACT_APP_BACK_URL;
+
 export function getGames() {
     return async function (dispatch) {
-        const response = await axios(`${BAKC_URL}/videogames`)
+        const response = await axios(`${REACT_APP_BACK_URL}/videogames`)
         return dispatch({
             type: GET_GAMES,
             payload: response.data
@@ -28,7 +30,7 @@ export function getGames() {
 
 export function getByName(name) {
     return async function (dispatch) {
-        const response = await axios(`${BAKC_URL}/videogames/name?name=${name}`)
+        const response = await axios(`${REACT_APP_BACK_URL}/videogames/name?name=${name}`)
         return dispatch({
             type: GET_BY_NAME,
             payload: response.data
@@ -38,7 +40,7 @@ export function getByName(name) {
 
 export function getById(id) {
     return async function (dispatch) {
-        const response = await axios(`${BAKC_URL}/videogames/${id}`)
+        const response = await axios(`${REACT_APP_BACK_URL}/videogames/${id}`)
         return dispatch({
             type: GET_BY_ID,
             payload: response.data,
@@ -48,7 +50,7 @@ export function getById(id) {
 
 export function sumbitGame(data) {
     return async function (dispatch) {
-        const response = await axios.post(`${BAKC_URL}/videogames`, data)
+        const response = await axios.post(`${REACT_APP_BACK_URL}/videogames`, data)
         return dispatch({
             type: SUMBIT_GAME,
             payload: [response.data]
@@ -58,7 +60,7 @@ export function sumbitGame(data) {
 
 export function getGenres() {
     return async function (dispatch) {
-        const response = await axios(`${BAKC_URL}/genres`)
+        const response = await axios(`${REACT_APP_BACK_URL}/genres`)
         return dispatch({
             type: GET_GENRES,
             payload: response.data
@@ -68,7 +70,7 @@ export function getGenres() {
 
 export function getPlatforms (){
     return async function(dispatch){
-        const response = await axios (`${BAKC_URL}/videogames`)
+        const response = await axios (`${REACT_APP_BACK_URL}/videogames`)
         return dispatch ({
             typeof: GET_PLATFORMS,
             payload: response.data
