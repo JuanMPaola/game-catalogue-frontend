@@ -18,7 +18,7 @@ export const FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN"
 
 export function getGames() {
     return async function (dispatch) {
-        const response = await axios("http://localhost:3001/videogames")
+        const response = await axios(`${BAKC_URL}/videogames`)
         return dispatch({
             type: GET_GAMES,
             payload: response.data
@@ -28,7 +28,7 @@ export function getGames() {
 
 export function getByName(name) {
     return async function (dispatch) {
-        const response = await axios(`http://localhost:3001/videogames/name?name=${name}`)
+        const response = await axios(`${BAKC_URL}/videogames/name?name=${name}`)
         return dispatch({
             type: GET_BY_NAME,
             payload: response.data
@@ -38,7 +38,7 @@ export function getByName(name) {
 
 export function getById(id) {
     return async function (dispatch) {
-        const response = await axios(`http://localhost:3001/videogames/${id}`)
+        const response = await axios(`${BAKC_URL}/videogames/${id}`)
         return dispatch({
             type: GET_BY_ID,
             payload: response.data,
@@ -48,7 +48,7 @@ export function getById(id) {
 
 export function sumbitGame(data) {
     return async function (dispatch) {
-        const response = await axios.post(`http://localhost:3001/videogames`, data)
+        const response = await axios.post(`${BAKC_URL}/videogames`, data)
         return dispatch({
             type: SUMBIT_GAME,
             payload: [response.data]
@@ -58,7 +58,7 @@ export function sumbitGame(data) {
 
 export function getGenres() {
     return async function (dispatch) {
-        const response = await axios("http://localhost:3001/genres")
+        const response = await axios(`${BAKC_URL}/genres`)
         return dispatch({
             type: GET_GENRES,
             payload: response.data
@@ -68,7 +68,7 @@ export function getGenres() {
 
 export function getPlatforms (){
     return async function(dispatch){
-        const response = await axios (`http://localhost:3001/videogames`)
+        const response = await axios (`${BAKC_URL}/videogames`)
         return dispatch ({
             typeof: GET_PLATFORMS,
             payload: response.data
