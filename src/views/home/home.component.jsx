@@ -103,7 +103,7 @@ function Home({ allGenres }) {
             <select onChange={handleGenre} value={selectedGenre}>
               <option value="All" selected>All</option>
               {
-                allGenres.map((genero) => (
+                allGenres?.map((genero) => (
                   <option key={genero.id} value={genero.name}>
                     {genero.name}
                   </option>
