@@ -140,5 +140,4 @@ function Home({ allGenres }) {
     </div>
   );
 }
-
 export default Home;
